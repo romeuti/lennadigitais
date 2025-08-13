@@ -1,0 +1,257 @@
+/* --- Estilos Globais e Layout Base --- */
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #1e1e2a !important; /* Fundo escuro */
+  color: #e0e0e0; /* Cor de texto clara */
+  overflow-x: hidden; /* Oculta a barra de rolagem horizontal */
+  min-height: 100vh; /* Garante que o corpo ocupe a altura total da viewport */
+  display: flex; /* Habilita o Flexbox para layout de coluna */
+  flex-direction: column; /* Organiza os elementos em coluna */
+}
+
+/* Oculta a barra de rolagem para navegadores WebKit (Chrome, Safari) */
+body::-webkit-scrollbar {
+    display: none;
+}
+/* Oculta a barra de rolagem para IE, Edge e Firefox */
+body {
+    -ms-overflow-style: none;  /* Para IE e Edge */
+    scrollbar-width: none;  /* Para Firefox */
+}
+
+/* --- Área de Conteúdo Principal (Main) --- */
+main {
+    flex-grow: 1; /* Permite que o main ocupe o espaço restante */
+    display: flex; /* Habilita o Flexbox para centralizar o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    padding: 20px; /* Preenchimento em volta do container do formulário */
+    box-sizing: border-box; /* Inclui o preenchimento na largura e altura total do elemento */
+}
+
+/* --- Container da Página de Formulário --- */
+.form-page-container {
+    width: 100%;
+    max-width: 760px; /* Largura máxima ajustada para o formulário de 2 colunas */
+    padding: 0 20px; /* Preenchimento horizontal interno para o container */
+    box-sizing: border-box;
+}
+
+/* --- Container do Formulário (Card) --- */
+.form-container {
+  background: #232333; /* Fundo escuro do formulário */
+  width: 100%;
+  margin: 0 auto; /* Centraliza o formulário horizontalmente */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+  box-sizing: border-box;
+}
+
+/* --- Layout do Formulário (Grid) --- */
+.form-container form {
+  display: grid;
+  grid-template-columns: 1fr; /* Padrão de 1 coluna para os form-rows */
+  grid-gap: 16px 30px; /* Espaçamento entre colunas e linhas. Apenas para os form-rows agora */
+}
+
+/* --- Linhas de Formulário (Form-Row) --- */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas para os campos dentro da linha */
+    grid-gap: inherit; /* Herda o espaçamento do formulário pai */
+    grid-column: 1 / -1; /* Faz com que a linha de formulário ocupe as duas colunas do formulário principal */
+    margin-bottom: 4px; /* Espaçamento entre as linhas do formulário */
+}
+
+/* O último form-row (botão e link) pode precisar de um ajuste de margem */
+.form-row:last-of-type {
+    margin-bottom: 0;
+}
+
+/* --- Estilo dos Grupos de Input --- */
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+.input-group label {
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+  color: #ccc;
+}
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background: #2a2a3b; /* Fundo do input mais escuro */
+  color: #f0f0f0;
+  box-sizing: border-box;
+}
+.input-group input:focus {
+  outline: none;
+  border-color: #ff6fb5; /* Cor de foco rosa */
+}
+
+/* --- Posicionamento do Ícone de Senha --- */
+.password-field {
+  position: relative;
+}
+.password-field input {
+  padding-right: 48px; /* Espaço para o ícone de alternância */
+}
+.password-field .toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 65%; /* Centraliza verticalmente na altura do elemento pai */
+  transform: translateY(-50%); /* Ajusta para compensar a própria altura do ícone */
+  cursor: pointer;
+  font-size: 1.1rem; /* Tamanho do ícone */
+  color: #aaa;
+  line-height: 1; /* Garante que a altura da linha não interfira no alinhamento vertical */
+  display: flex; /* Adicionado display flex */
+  align-items: center; /* Alinha o conteúdo (o ícone) no centro */
+  height: 100%; /* Opcional: faz o span ocupar a altura total do input-group para melhor área de clique */
+}
+.password-field .toggle-password:hover {
+  color: #ff6fb5;
+}
+
+/* --- Botão de Submissão --- */
+.btn-submit {
+  grid-column: 1 / -1; /* Ocupa as duas colunas em desktop */
+  width: 100%;
+  padding: 14px 0;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 4px;
+  background: #ff6fb5; /* Cor rosa */
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 20px; /* Espaçamento superior */
+}
+.btn-submit:hover {
+  background: #e05592;
+}
+
+/* --- Títulos e Parágrafos do Formulário --- */
+.form-container h2 {
+    text-align: center;
+    color: #f0f0f0;
+    margin-bottom: 10px;
+    font-size: 2em;
+}
+.form-container p { /* Para o texto "Preencha os dados abaixo..." */
+    text-align: center;
+    color: #b0b0b0;
+    margin-bottom: 25px;
+    font-size: 0.95em;
+}
+
+/* --- Estilos para Mensagens de Alerta --- */
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #555;
+}
+.alert-success {
+    background-color: #4CAF50;
+    color: #fff;
+}
+.alert-error {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+/* --- Link de Login --- */
+.form-container .login-link {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-top: 14px;
+  font-size: 0.9rem;
+}
+.form-container .login-link a {
+  color: #80c3ff;
+  text-decoration: none;
+}
+.form-container .login-link a:hover {
+  text-decoration: underline;
+}
+
+/* --- Estilos Responsivos --- */
+@media (max-width: 768px) {
+  main {
+      padding: 10px; /* Reduz o preenchimento do main em telas menores */
+  }
+  .form-page-container {
+    margin: 10px;
+    padding: 0 10px;
+    max-width: none; /* Remove a largura máxima */
+  }
+  .form-container {
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .form-container form {
+    grid-template-columns: 1fr; /* Força o layout de coluna única */
+    grid-gap: 16px 0;
+  }
+  /* Garante que as linhas do formulário também sejam de coluna única em mobile */
+  .form-row {
+      grid-template-columns: 1fr;
+      grid-gap: inherit;
+  }
+
+  /* Ajustes de fonte e preenchimento para inputs em mobile */
+  .input-group label {
+      font-size: 0.9rem;
+  }
+  .input-group input {
+      padding: 10px;
+      font-size: 0.95rem;
+  }
+  .password-field input {
+      padding-right: 40px;
+  }
+  .password-field .toggle-password {
+      right: 10px;
+      font-size: 1rem;
+  }
+  .btn-submit {
+      padding: 12px 0;
+      font-size: 0.95rem;
+  }
+  .form-container h2 {
+      font-size: 1.8em;
+      margin-bottom: 15px;
+  }
+  .form-container p {
+      font-size: 0.85em;
+      margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+    .form-container {
+        padding: 15px;
+    }
+    .form-container h2 {
+        font-size: 1.6em;
+    }
+    .input-group input {
+        font-size: 0.9em;
+    }
+    .btn-submit {
+        font-size: 0.9em;
+    }
+}
+

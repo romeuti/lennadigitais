@@ -1,0 +1,138 @@
+/* Estilos Gerais para uma aparência moderna com fundo escuro */
+body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: #343a40; /* Cinza escuro para o fundo */
+    color: #fff; /* Cor de texto padrão branca para melhor contraste */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Garante que ocupa a altura total da viewport */
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.admin-panel {
+    background-color: #495057; /* Tom de cinza mais claro para o painel */
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Sombra mais visível no fundo escuro */
+    text-align: center;
+    max-width: 600px; /* Largura máxima para centralizar o conteúdo */
+    width: 100%;
+}
+
+.admin-panel h1 {
+    color: #f8f9fa; /* Branco quase puro para o título */
+    margin-bottom: 25px;
+    font-size: 2.2em;
+    font-weight: 700;
+}
+
+.admin-panel p {
+    font-size: 1.05em;
+    color: #e9ecef; /* Cinza muito claro para o parágrafo */
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.whatsapp-send-box {
+    background-color: #386641; /* Tom de verde mais escuro para a caixa de WhatsApp */
+    border: 1px solid #81b29a; /* Borda sutil em tom de verde mais claro */
+    border-radius: 10px;
+    padding: 30px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra mais suave para a caixa interna */
+}
+
+.whatsapp-send-box p {
+    font-size: 1.1em;
+    color: #f0f8f4; /* Branco esverdeado para o texto da caixa */
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+.whatsapp-send-box .btn-whatsapp-send {
+    display: inline-block;
+    background: linear-gradient(45deg, #25d366, #1da851); /* Gradiente vibrante do WhatsApp */
+    color: white;
+    padding: 16px 35px;
+    border-radius: 30px; /* Botão mais arredondado (pill shape) */
+    text-decoration: none;
+    font-size: 1.25em;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 15px rgba(37, 211, 102, 0.4); /* Sombra colorida */
+    border: none;
+    cursor: pointer;
+}
+
+.whatsapp-send-box .btn-whatsapp-send:hover {
+    background: linear-gradient(45deg, #1da851, #25d366); /* Inverte o gradiente no hover */
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.6);
+}
+
+.whatsapp-send-box .note {
+    font-size: 0.9em;
+    color: #cdd3d8; /* Tom de cinza mais claro para a nota */
+    margin-top: 20px;
+    font-style: italic;
+}
+
+.secondary-actions {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Espaço entre os botões */
+}
+
+.btn-secondary {
+    display: inline-block;
+    background-color: #6c757d; /* Um cinza neutro para os botões secundários */
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px; /* Cantos levemente arredondados */
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    transform: translateY(-2px);
+}
+
+/* Responsividade básica */
+@media (max-width: 768px) {
+    .admin-panel {
+        padding: 30px 20px;
+        margin: 15px;
+    }
+    .admin-panel h1 {
+        font-size: 1.8em;
+    }
+    .whatsapp-send-box {
+        padding: 20px;
+    }
+    .whatsapp-send-box .btn-whatsapp-send {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 14px 25px;
+        font-size: 1.1em;
+    }
+    .secondary-actions {
+        flex-direction: column; /* Empilha os botões em telas menores */
+        gap: 10px;
+    }
+    .btn-secondary {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+

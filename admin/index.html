@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <title>Acesso Restrito</title>
+    <!-- ⏱️ Redireciona automaticamente após 3 segundos -->
+    <meta http-equiv="refresh" content="3; url=../index.php">
+
+    <style>
+      /* 🧱 Remove margens e rolagem da página */
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      /* 🖼️ Define imagem de fundo cobrindo toda a tela */
+      body {
+        background: url("../img/bloqueio.jpg") no-repeat center center fixed;
+        background-size: cover;
+      }
+
+      /* 🔴 Estilo da mensagem de alerta */
+      .aviso {
+        position: absolute; /* Posiciona sobre a imagem */
+        top: 30px;           /* Distância do topo */
+        left: 50%;           /* Alinhamento horizontal */
+        transform: translateX(-50%); /* Centraliza horizontalmente */
+        font-size: 1.6em;
+        font-weight: bold;
+        color: red;          /* Cor vermelha */
+        background-color: rgba(0, 0, 0, 0.6); /* Fundo escuro semi-transparente */
+        padding: 15px 25px;
+        border-radius: 10px;
+        animation: piscar 1s infinite; /* Animação de piscar */
+      }
+
+      /* ✨ Animação para fazer a mensagem piscar */
+      @keyframes piscar {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.2; }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- 🚫 Mensagem de acesso restrito -->
+    <div class="aviso">🚫 Acesso não autorizado! Você será redirecionado...</div>
+  </body>
+</html>
+

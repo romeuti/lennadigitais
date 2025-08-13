@@ -1,0 +1,263 @@
+/* --- Estilo Moderno e Escuro para a Página de Cadastro de Produto --- */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: #1e293b;
+    color: #cbd5e1;
+    margin: 0;
+    padding: 30px;
+}
+.container {
+    max-width: 900px;
+    margin: auto;
+    background-color: #334155;
+    padding: 20px 40px;
+    border-radius: 8px;
+    border: 1px solid #475569;
+}
+h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: #f1f5f9;
+    font-weight: 400;
+    font-size: 28px; /* Tamanho do título para desktop */
+}
+.form-group {
+    margin-bottom: 25px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #94a3b8;
+}
+.form-group input[type="text"],
+.form-group input[type="file"],
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #475569;
+    background-color: #1e293b;
+    color: #f1f5f9;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+}
+
+/* Estilo para a linha com duas colunas */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Cria duas colunas de tamanho igual */
+    gap: 25px; /* Espaço entre as colunas */
+}
+
+/* Estilo para o container do botão "Nova Categoria" */
+.form-actions {
+    text-align: right; /* Alinha o botão à direita */
+    margin-top: -15px; /* Puxa o botão para mais perto da linha de cima */
+    margin-bottom: 25px;
+}
+
+.btn-new-category {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+.btn-new-category:hover {
+    background-color: #0069d9;
+}
+
+.btn-submit {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+    transition: background-color 0.3s;
+}
+.btn-submit:hover {
+    background-color: #218838;
+}
+
+/* Ajustes para o TinyMCE no tema escuro */
+.tox-tinymce {
+    border: 1px solid #475569 !important;
+}
+
+/* Botões de Navegação no Topo */
+.top-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #475569;
+}
+.top-actions a {
+    text-decoration: none;
+    color: #cbd5e1;
+    background-color: #475569;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+.top-actions a:hover {
+    background-color: #64748b;
+}
+
+/* --- ESTILOS PARA O PREVIEW DE IMAGENS --- */
+.image-preview-grid {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+    padding: 10px;
+    background-color: #1e293b;
+    border-radius: 6px;
+    border: 1px solid #475569;
+    min-height: 140px; /* Garante uma altura mínima */
+}
+
+/* NOVO: Container para cada item do preview (imagem + botão) */
+.preview-item-container {
+    position: relative;
+    width: 100%;
+    height: 120px;
+}
+
+.preview-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 2px solid #475569;
+}
+
+/* NOVO: Estilo para o botão de remover a imagem do preview */
+.remove-preview-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 24px;
+    height: 24px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: 1px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    line-height: 1;
+    padding: 0;
+    font-weight: bold;
+}
+.remove-preview-btn:hover {
+    background-color: #dc3545; /* Vermelho no hover */
+    border-color: #dc3545;
+}
+
+/* --- RESPONSIVIDADE TOTAL PARA CELULAR --- */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    .container {
+        padding: 20px 15px;
+    }
+    h2 {
+        font-size: 22px;
+    }
+    .top-actions {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .form-group {
+        margin-bottom: 20px;
+    }
+    .form-actions {
+        text-align: center;
+        margin-top: 0;
+    }
+}
+
+/* --- NOVO: ESTILOS PARA MENSAGENS DE ALERTA --- */
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    color: #ffffff;
+    text-align: center;
+    font-weight: 600;
+}
+.alert-success {
+    background-color: #28a745;
+}
+.alert-error {
+    background-color: #dc3545;
+}
+
+/* Garante que o <textarea> receba o mesmo styling de inputs e selects */
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #475569;
+    background-color: #1e293b;
+    color: #f1f5f9;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: inherit;
+}
+.form-group textarea:focus {
+    outline: none;
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+}
+
+/* Estiliza o botão interno do file-input para ficar no padrão do tema */
+.form-group input[type="file"]::file-selector-button {
+    background-color: #64748b;
+    border: none;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 6px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.form-group input[type="file"]::-webkit-file-upload-button {
+    background-color: #64748b;
+    border: none;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 6px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+

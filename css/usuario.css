@@ -1,0 +1,362 @@
+/* ESTILOS GERAIS E LAYOUT BASE */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: #1e2b3b; /* Fundo azul-escuro/chumbo */
+    color: #cbd5e1; /* Cor de texto clara */
+    margin: 0;
+    padding: 30px;
+}
+
+.management-container {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* TIPOGRAFIA */
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #ffffff;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+/* COMPONENTES PRINCIPAIS (Cards) */
+.card {
+    background-color: #334155; /* Cor do card um pouco mais clara que o fundo */
+    border: 1px solid #475569;
+    border-radius: 8px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.card h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    color: #f1f5f9;
+    font-weight: 600;
+    border-bottom: 1px solid #475569;
+    padding-bottom: 15px;
+}
+
+/* FORMULÁRIOS E BOTÕES */
+.input-group { /* Adicionado para espaçamento consistente */
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #94a3b8;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #475569;
+    background-color: #1e2b3b;
+    color: #f1f5f9;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+}
+
+/* Estilos para campos de entrada somente leitura/desabilitados */
+.input-group input[readonly],
+.input-group input[disabled] {
+    background-color: #475569; /* Cor de fundo diferente para indicar que não é editável */
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+
+button {
+    padding: 12px 20px;
+    background-color: #38bdf8; /* Azul claro vibrante */
+    color: #0f172a;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #7dd3fc;
+}
+
+/* Estilo para botões desabilitados */
+button[disabled] {
+    background-color: #64748b; /* Cinza mais escuro */
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+button[disabled]:hover {
+    background-color: #64748b; /* Não muda no hover */
+    transform: none; /* Remove qualquer transformação no hover */
+}
+
+/* TABELAS E PAGINAÇÃO */
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table.client-list {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table.client-list th,
+table.client-list td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #475569;
+}
+
+table.client-list th {
+    color: #cbd5e1;
+}
+
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pagination a {
+    color: #38bdf8;
+    padding: 8px 12px;
+    text-decoration: none;
+    border: 1px solid #475569;
+    margin: 0 4px;
+    border-radius: 4px;
+}
+
+.pagination a.active {
+    background-color: #38bdf8;
+    color: #0f172a;
+    border-color: #38bdf8;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #475569;
+}
+
+/* COMPONENTES DE NAVEGAÇÃO E AÇÃO - Navegação no topo da página */
+.top-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.top-actions a {
+    text-decoration: none;
+    color: #cbd5e1;
+    background-color: #475569;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.top-actions a:hover {
+    background-color: #64748b;
+}
+
+/* Botões de ação dentro das tabelas */
+.action-links a {
+    display: inline-block;
+    padding: 6px 12px;
+    margin: 2px;
+    border-radius: 5px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: transform 0.2s ease;
+}
+
+.action-links a:hover {
+    transform: scale(1.05); /* Efeito de zoom sutil */
+}
+
+.btn-edit {
+    background-color: #007bff;
+}
+.btn-edit:hover {
+    background-color: #0069d9;
+}
+
+.btn-remove {
+    background-color: #dc3545;
+}
+.btn-remove:hover {
+    background-color: #c82333;
+}
+
+/* ALERTAS E MENSAGENS */
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    color: #ffffff;
+    text-align: center;
+    font-weight: 600;
+}
+
+.alert-success {
+    background-color: #28a745;
+}
+
+.alert-error {
+    background-color: #dc3545;
+}
+
+/* Estilo para ações desabilitadas (links ou spans que agem como botões desabilitados) */
+.disabled-action {
+    display: inline-block;
+    padding: 6px 12px;
+    margin: 2px;
+    border-radius: 5px;
+    color: #cbd5e1; /* Cor de texto padrão */
+    background-color: #64748b; /* Cinza mais escuro */
+    cursor: not-allowed;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    opacity: 0.7; /* Suaviza a cor */
+    pointer-events: none; /* Impede eventos de clique */
+}
+.disabled-action:hover {
+    transform: none; /* Remove o efeito de zoom no hover */
+}
+
+/* Estilo para o botão "Cancelar Edição" (reutilizando btn-secondary) */
+.btn-secondary { /* Estilo já existente no seu CSS */
+    background-color: #6c757d;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: background-color 0.3s;
+    display: inline-block; /* Padrão para permitir ao lado de outros botões */
+}
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+/* Classe para margem superior para botões/elementos */
+.mt-10 {
+    margin-top: 10px;
+}
+
+/* Estilo para a linha divisória no formulário de edição */
+.divider {
+    border: none;
+    border-top: 1px solid #475569; /* Linha mais sutil */
+    margin: 30px 0; /* Espaçamento padrão para o divisor */
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    /* Remove a necessidade de rolar a tabela horizontalmente */
+    .table-wrapper {
+        overflow-x: hidden;
+    }
+
+    /* Esconde o cabeçalho original da tabela em telas pequenas */
+    table.client-list thead {
+        display: none;
+    }
+
+    /* Transforma cada linha da tabela em um "card" */
+    table.client-list tr {
+        display: block;
+        margin-bottom: 15px;
+        border: 1px solid #475569;
+        border-radius: 6px;
+        padding: 10px;
+    }
+
+    /* Transforma cada célula em uma linha dentro do card */
+    table.client-list td {
+        display: flex;
+        justify-content: space-between; /* Alinha o rótulo à esquerda e o dado à direita */
+        text-align: right;
+        padding: 10px 5px;
+        border-bottom: 1px solid #475569;
+    }
+    
+    table.client-list td:last-child {
+        border-bottom: none; /* Remove a borda da última célula (Ações) */
+    }
+
+    /* Cria o rótulo de texto antes de cada dado, usando o atributo data-label */
+    table.client-list td::before {
+        content: attr(data-label);
+        font-weight: 600;
+        text-align: left;
+        color: #94a3b8; /* Cor do rótulo */
+    }
+
+    /* Ajusta os botões de ação para ficarem mais visíveis */
+    .action-links {
+        justify-content: flex-end; /* Alinha os botões à direita */
+        gap: 10px;
+        /* Garante que os botões dentro das células de ação fiquem flexíveis */
+        display: flex; 
+        flex-wrap: wrap; /* Permite que os botões quebrem para a próxima linha */
+    }
+
+    /* Em telas pequenas, o botão cancelar edição ocupa a largura total */
+    .btn-secondary.mt-10,
+    button[type="submit"] { /* Garante que botões de submit também fiquem full width */
+        width: 100%;
+        text-align: center;
+        margin-top: 10px; /* Adiciona um pouco de margem acima */
+    }
+}
+
+/* Ajustes para telas muito pequenas */
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+    .management-container {
+        padding: 0; /* Remove padding extra no container em telas muito pequenas */
+    }
+    h1 {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+    }
+    .card {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    .card h2 {
+        font-size: 1.3em;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+    }
+    .top-actions {
+        flex-direction: column; /* Empilha os botões de ação no topo */
+        gap: 10px;
+    }
+    .top-actions a {
+        width: 100%; /* Ocupa toda a largura disponível */
+        text-align: center;
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+}
+

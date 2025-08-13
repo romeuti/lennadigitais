@@ -1,0 +1,257 @@
+/* Estilos para a página de Login (cadastro_ou_login.php) */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a202c !important; /* Fundo escuro, igual ao redefinir_senha.css */
+    color: #cbd5e1; /* Cor de texto padrão para o tema escuro */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Garante que o body ocupe a altura total da viewport */
+    display: flex; /* Adiciona flexbox ao body */
+    flex-direction: column; /* Organiza os elementos em coluna */
+}
+
+/* Garante que o header (se não estiver em um CSS global) também tenha cor escura */
+.site-header { /* Se este estilo não estiver em index.css ou um CSS global */
+    background-color: #2d3748; /* Fundo escuro para o cabeçalho */
+    color: #ffffff;
+    /* Outros estilos do seu header */
+}
+
+main {
+    flex-grow: 1; /* Permite que o main ocupe o espaço restante */
+    display: flex; /* Adiciona flexbox ao main para centralizar o conteúdo */
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Adiciona um padding em volta do container */
+}
+
+.container.access-container { /* Alvo o container principal na página de acesso */
+    width: 100%;
+    max-width: 500px; /* Largura máxima do card de login */
+    padding: 30px;
+    background-color: #2d3748 !important; /* Fundo escuro do card, com !important */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    box-sizing: border-box;
+    margin: auto; /* Centraliza o card no main */
+}
+
+.access-container h1 {
+    color: #f7fafc; /* Cor do título principal */
+    margin-bottom: 30px;
+    font-size: 2.2em;
+}
+
+/* Remover o .form-wrapper para login de um único card, ajustar .form-card */
+.form-wrapper { /* Se mantiver este div no HTML, ajuste seu comportamento para não ser flex */
+    display: block; /* Volta para o display padrão */
+    margin-top: 0; /* Remove a margem superior que era para o flex */
+    gap: 0; /* Remove o gap */
+}
+
+.form-card { /* O card de login */
+    background-color: transparent !important; /* Fundo transparente, já que o access-container tem o fundo */
+    padding: 0 !important; /* Remove padding duplicado */
+    border-radius: 8px;
+    box-shadow: none !important; /* Remove sombra duplicada */
+    flex: none; /* Desativa o comportamento flex que era para múltiplos cards */
+    min-width: unset;
+    max-width: unset;
+    margin: 0 auto; /* Centraliza o card de login dentro do access-container */
+}
+
+.form-card h2 {
+    color: #63b3ed; /* Cor do subtítulo "Já Sou Cliente" */
+    margin-bottom: 25px;
+    font-size: 1.8em;
+}
+
+/* Estilo para grupos de formulário (label + input) */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #a0aec0; /* Cor dos labels */
+}
+
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="text"],
+.form-group input[type="tel"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #4a5568; /* Borda mais escura */
+    background-color: #2d3748; /* Fundo do input escuro */
+    color: #f7fafc; /* Texto do input claro */
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.form-group input[type="email"]:focus,
+.form-group input[type="password"]:focus,
+.form-group input[type="text"]:focus,
+.form-group input[type="tel"]:focus {
+    outline: none;
+    border-color: #63b3ed; /* Borda azul no foco */
+    box-shadow: 0 0 0 3px rgba(99, 179, 237, 0.2);
+}
+
+/* Botões de submissão */
+.btn-submit {
+    background-color: #e83e8c !important; /* Cor principal rosa/magenta, com !important */
+    color: #fff !important;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.btn-submit:hover {
+    background-color: #d12c7b !important;
+}
+
+/* Mensagens de alerta (sucesso/erro) */
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0.95;
+    background-color: #f8d7da; /* Cores claras para alertas no tema escuro, contrastando */
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+.alert-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Estilos para o botão de visualização de senha */
+.password-field {
+    position: relative;
+}
+
+.password-field input[type="password"],
+.password-field input[type="text"] {
+    padding-right: 40px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #a0aec0; /* Cor dos ícones de senha */
+}
+
+/* Estilo para o link "Esqueceu a senha?" */
+.forgot-password {
+    margin-top: 15px;
+    font-size: 0.95em;
+}
+.forgot-password a {
+    color: #63b3ed; /* Azul para links no tema escuro */
+    text-decoration: none;
+    font-weight: bold;
+}
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+/* NOVO: Estilo para o link "Não tem cadastro?" */
+.not-registered-link {
+    margin-top: 20px;
+    font-size: 0.95em;
+    color: #a0aec0; /* Cor de texto para links secundários */
+}
+.not-registered-link a {
+    color: #e83e8c; /* Cor de destaque para o link de cadastro */
+    text-decoration: none;
+    font-weight: bold;
+}
+.not-registered-link a:hover {
+    text-decoration: underline;
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .main { /* Ajuste o main para que o container não fique muito apertado */
+        padding: 10px;
+    }
+    .container.access-container {
+        padding: 25px; /* Reduz padding em telas menores */
+        margin: 20px auto; /* Mantém centralizado */
+        max-width: 90%; /* Ocupa mais largura em telas menores */
+    }
+
+    .access-container h1 {
+        font-size: 1.8em;
+    }
+
+    .form-card h2 {
+        font-size: 1.5em;
+    }
+    .btn-submit {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 0; /* Remove padding do body em telas muito pequenas */
+    }
+    main {
+        padding: 10px; /* Padding menor no main */
+    }
+    .container.access-container {
+        padding: 15px;
+        margin: 10px auto;
+        border-radius: 6px;
+    }
+    .access-container h1 {
+        font-size: 1.6em;
+    }
+    .form-card h2 {
+        font-size: 1.3em;
+    }
+    .form-group label, .form-group input {
+        font-size: 0.9em;
+    }
+    .btn-submit {
+        font-size: 0.95em;
+        padding: 10px;
+    }
+    .toggle-password {
+        font-size: 1em;
+        right: 8px;
+    }
+    .forgot-password, .not-registered-link {
+        font-size: 0.9em;
+        margin-top: 10px;
+    }
+}
+

@@ -1,0 +1,286 @@
+/* --- Estilos para gerenciar_pedidos.php --- */
+body {
+    background-color: #2c2c2c; /* Fundo mais escuro para o tema */
+    color: #e0e0e0; /* Texto claro padrão */
+}
+
+.admin-panel {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #3a3a3a; /* Fundo do painel mais escuro */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Sombra mais pronunciada para destaque */
+    text-align: center;
+}
+
+.admin-panel h1 {
+    color: #f0f0f0; /* Título claro */
+    margin-bottom: 25px;
+    font-size: 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.admin-panel p {
+    color: #b0b0b0; /* Texto secundário mais claro */
+    margin-bottom: 30px;
+    font-size: 1.1em;
+}
+
+/* Mensagens de alerta (manter cores visíveis em fundo escuro) */
+.alert {
+    padding: 15px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.alert-success {
+    background-color: #4CAF50; /* Verde mais escuro */
+    color: white;
+    border: 1px solid #4CAF50;
+}
+
+.alert-error {
+    background-color: #f44336; /* Vermelho mais escuro */
+    color: white;
+    border: 1px solid #f44336;
+}
+
+.table-wrapper {
+    overflow-x: auto; /* Permite rolagem horizontal APENAS se necessário, em vez de quebrar o layout */
+    margin-bottom: 30px;
+    /* Ajustes para um tema mais escuro */
+    border-radius: 8px; /* Para as bordas do wrapper */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.table-list {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    background-color: #444444; /* Fundo da tabela mais escuro */
+    /* Removido box-shadow e border-radius daqui, já estão no wrapper */
+}
+
+.table-list th,
+.table-list td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #555555; /* Linhas divisórias mais visíveis no escuro */
+    /* Removido white-space: nowrap; daqui para permitir quebra de linha em todas as telas */
+    color: #e0e0e0; /* Texto da célula claro */
+}
+
+.table-list th {
+    background-color: #e83e8c; /* Cor do Lenna para cabeçalho */
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    white-space: nowrap; /* Manter nowrap para o cabeçalho, se couber */
+}
+
+.table-list tbody tr:nth-child(even) {
+    background-color: #4c4c4c; /* Linhas alternadas para melhor leitura */
+}
+
+.table-list tbody tr:hover {
+    background-color: #5a5a5a; /* Hover mais escuro */
+}
+
+/* Estilos para status do pedido */
+.status-aguardando-pagamento {
+    color: #ffeb3b; /* Amarelo vibrante para destaque */
+    font-weight: bold;
+}
+
+.status-pago {
+    color: #8bc34a; /* Verde claro */
+    font-weight: bold;
+}
+
+.status-cancelado {
+    color: #ef5350; /* Vermelho claro */
+    font-weight: bold;
+}
+
+/* Estilos dos botões de ação na tabela */
+.btn {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 3px 0;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    white-space: nowrap; /* Garante que o botão não quebre */
+}
+
+.btn-view {
+    background-color: #2196f3; /* Azul */
+    color: white;
+}
+
+.btn-view:hover {
+    background-color: #1976d2;
+}
+
+/* Novos botões de status (cores adaptadas para tema escuro) */
+.btn-approve {
+    background-color: #4CAF50; /* Verde */
+    color: white;
+}
+.btn-approve:hover {
+    background-color: #388e3c;
+}
+
+.btn-reject { /* Para "Reprovar" */
+    background-color: #f44336; /* Vermelho */
+    color: white;
+}
+.btn-reject:hover {
+    background-color: #d32f2f;
+}
+
+.btn-process { /* Para "Em Processamento" */
+    background-color: #ff9800; /* Laranja */
+    color: white;
+}
+.btn-process:hover {
+    background-color: #e65100;
+}
+
+/* Paginação */
+.pagination {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.pagination a,
+.pagination span {
+    display: inline-block;
+    padding: 8px 15px;
+    margin: 0 5px;
+    border: 1px solid #777; /* Borda mais clara */
+    border-radius: 5px;
+    text-decoration: none;
+    color: #e83e8c; /* Cor do Lenna */
+    background-color: #3a3a3a; /* Fundo para os botões da paginação */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.pagination a:hover {
+    background-color: #e83e8c;
+    color: white;
+}
+
+.pagination span.current {
+    background-color: #e83e8c;
+    color: white;
+    border-color: #e83e8c;
+    font-weight: bold;
+}
+
+/* Ações secundárias */
+.secondary-actions {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #555; /* Linha divisória mais clara */
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-secondary {
+    background-color: #6c757d; /* Cinza escuro */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+/* Responsividade da tabela (revisado para melhor empilhamento e labels) */
+@media (max-width: 768px) {
+    .table-list thead {
+        display: none; /* Esconde o cabeçalho em telas pequenas */
+    }
+
+    .table-list, .table-list tbody, .table-list tr, .table-list td {
+        display: block;
+        width: 100%;
+    }
+
+    .table-list tr {
+        margin-bottom: 15px;
+        border: 1px solid #555555; /* Borda da linha clara no tema escuro */
+        border-radius: 8px;
+        padding: 10px;
+        background-color: #444444; /* Fundo do card da linha */
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .table-list td {
+        text-align: right; /* Alinha o conteúdo à direita */
+        padding-left: 50%; /* Espaço para o label à esquerda */
+        position: relative;
+        white-space: normal; /* Permite que o texto quebre para evitar barra horizontal */
+    }
+
+    .table-list td::before {
+        content: attr(data-label); /* Usa o atributo data-label para exibir o cabeçalho */
+        position: absolute;
+        left: 15px;
+        width: calc(50% - 30px); /* Largura do label */
+        text-align: left; /* Alinha o label à esquerda */
+        font-weight: bold;
+        color: #b0b0b0; /* Cor do label */
+    }
+
+    .table-list td:first-child {
+        padding-top: 20px;
+    }
+    .table-list td:last-child {
+        padding-bottom: 20px;
+        border-bottom: none;
+    }
+
+    .btn {
+        width: calc(100% - 6px); /* Para ocupar a largura total do "card" da linha */
+        margin-bottom: 10px;
+        margin-left: 3px;
+        margin-right: 3px;
+        white-space: normal; /* Botões também devem quebrar para evitar overflow */
+    }
+}
+
+@media (max-width: 480px) {
+    .admin-panel {
+        padding: 15px;
+        margin: 20px auto;
+    }
+
+    .admin-panel h1 {
+        font-size: 2em;
+    }
+
+    .secondary-actions {
+        flex-direction: column;
+    }
+    .btn-secondary {
+        width: 100%;
+    }
+}
+

@@ -1,0 +1,223 @@
+/* Estilos para as páginas de Recuperar Senha e Redefinir Senha */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: #1a202c !important; /* Fundo bem escuro (Tailwind CSS gray-900), com !important */
+    color: #cbd5e1; /* Texto claro */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header e Footer: Manter consistência com o restante do site */
+/* Certifique-se que o index.css ou outro CSS global cuida do header/footer */
+.site-header {
+    background-color: #2d3748; /* Cor de cabeçalho mais escura */
+    color: #ffffff;
+    /* Adicione outros estilos de cabeçalho aqui */
+}
+
+footer {
+    background-color: #2d3748; /* Cor de rodapé mais escura */
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+}
+
+
+main {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.access-container {
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    background-color: #2d3748 !important; /* Cor do card principal (Tailwind gray-800), com !important */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.access-container h1 {
+    color: #f7fafc !important; /* Título mais claro, com !important */
+    margin-bottom: 30px;
+    font-size: 2.2em;
+    border-bottom: 1px solid #4a5568;
+    padding-bottom: 15px;
+}
+
+/* Remover o form-wrapper e form-card, usar apenas o access-container como card principal */
+/* Se quiser múltiplos cards dentro do access-container, reintroduza flexbox */
+.form-card { /* Esta classe está no HTML, então vamos ajustá-la aqui para garantir */
+    background-color: transparent !important; /* Remove o fundo branco, com !important */
+    box-shadow: none !important; /* Remove a sombra, com !important */
+    padding: 0 !important; /* Remove padding extra se o access-container já tiver, com !important */
+    margin: 0 !important; /* Garante que não tenha margem externa, com !important */
+    min-width: unset;
+    max-width: unset;
+    flex: none;
+    border: none !important; /* Remove qualquer borda indesejada */
+}
+
+
+.form-card h2 {
+    color: #63b3ed !important; /* Azul claro para subtítulos, com !important */
+    margin-bottom: 25px;
+    font-size: 1.8em;
+    border-bottom: none;
+}
+
+/* Estilo para grupos de formulário (label + input) */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #a0aec0;
+}
+
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="text"],
+.form-group input[type="tel"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #4a5568;
+    background-color: #2d3748;
+    color: #f7fafc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.form-group input[type="email"]:focus,
+.form-group input[type="password"]:focus,
+.form-group input[type="text"]:focus,
+.form-group input[type="tel"]:focus {
+    outline: none;
+    border-color: #63b3ed;
+    box-shadow: 0 0 0 3px rgba(99, 179, 237, 0.2);
+}
+
+/* Botões de submissão */
+.btn-submit {
+    background-color: #63b3ed !important; /* Azul claro para botões de ação, com !important */
+    color: #1a202c !important; /* Texto escuro, com !important */
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.btn-submit:hover {
+    background-color: #4299e1 !important;
+}
+
+/* Mensagens de alerta (sucesso/erro) */
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0.95;
+}
+
+.alert-success {
+    background-color: #48bb78;
+    color: #fff;
+    border: 1px solid #38a169;
+}
+
+.alert-error {
+    background-color: #fc8181;
+    color: #fff;
+    border: 1px solid #e53e3e;
+}
+
+/* Estilos para o botão de visualização de senha */
+.password-field {
+    position: relative;
+}
+
+.password-field input[type="password"],
+.password-field input[type="text"] {
+    padding-right: 40px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #a0aec0;
+}
+
+/* Links de navegação */
+p.mt-15 {
+    margin-top: 15px;
+    text-align: center;
+}
+p.mt-15 a {
+    color: #63b3ed;
+    text-decoration: none;
+    font-weight: bold;
+}
+p.mt-15 a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .access-container {
+        padding: 20px;
+        margin: 20px auto;
+    }
+    .access-container h1 {
+        font-size: 1.8em;
+    }
+    .form-card h2 {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 10px;
+    }
+    .access-container {
+        padding: 15px;
+        margin: 10px auto;
+    }
+    .access-container h1 {
+        font-size: 1.6em;
+    }
+    .form-group input {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+    .btn-submit {
+        font-size: 1em;
+        padding: 10px 15px;
+    }
+}
+

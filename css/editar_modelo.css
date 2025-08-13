@@ -1,0 +1,115 @@
+/* --- GERAL E LAYOUT BASE --- */
+body {
+  margin: 0;
+  padding: 0;
+  background: #1e293b;
+  color: #e2e8f0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.admin-panel {
+  max-width: 1000px; /* Largura máxima do painel reduzida */
+  margin: 40px auto;
+  padding: 30px;
+  background: #2a2e45;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+  box-sizing: border-box; /* Garante que o padding não aumente a largura total */
+}
+
+/* --- CABEÇALHO E TÍTULO --- */
+h1 {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+/* --- FORMULÁRIO E EDITOR TinyMCE --- */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+/* Garante que o editor ocupe o espaço disponível dentro do painel */
+.tox.tox-tinymce {
+  width: 100% !important;
+  box-sizing: border-box;
+}
+
+/* --- BOTÕES DE AÇÃO --- */
+.form-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.btn-save, .btn-cancel, .btn-logout {
+  padding: 10px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-save:hover, .btn-cancel:hover, .btn-logout:hover {
+  transform: translateY(-1px);
+}
+
+.btn-save {
+  background: #22c55e;
+  color: #1f2937;
+}
+
+.btn-save:hover {
+  background: #16a34a;
+}
+
+.btn-cancel {
+  background: #ef4444;
+  color: #ffffff;
+}
+
+.btn-cancel:hover {
+  background: #dc2626;
+}
+
+.btn-logout {
+  background: #f59e0b;
+  color: #1e1e2d;
+}
+
+.btn-logout:hover {
+  background: #d97706;
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 600px) {
+  .admin-panel {
+    margin: 20px 10px; /* Reduz margens laterais em telas pequenas */
+    padding: 20px;
+  }
+
+  .form-actions {
+    flex-direction: column; /* Botões ficam em coluna */
+    align-items: center; /* Centraliza os botões e evita que estiquem */
+    gap: 12px;
+  }
+  
+  .btn-save, .btn-cancel, .btn-logout {
+      width: 100%; /* Faz os botões ocuparem a mesma largura */
+      max-width: 320px; /* Define uma largura máxima para não ficarem muito grandes */
+  }
+}
+

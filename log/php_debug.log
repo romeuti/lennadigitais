@@ -1,0 +1,96 @@
+[02-Aug-2025 20:43:26 America/Sao_Paulo] RECUPERAR_SENHA: Novo token gerado: 3b3b8bb4d2661a2b75c792b29482c31a6c28821ffdccf6c55f14c2e197c28087 expira em: 2025-08-02 21:43:26 (PHP Time: 1754178206)
+[02-Aug-2025 20:43:26 America/Sao_Paulo] RECUPERAR_SENHA: Token inserido no DB para romeusn@gmail.com. ID do token: 15
+[02-Aug-2025 20:43:29 America/Sao_Paulo] RECUPERAR_SENHA: Email de redefinição enviado com sucesso para romeusn@gmail.com
+[02-Aug-2025 20:44:06 America/Sao_Paulo] PHP Warning:  Undefined variable $conn in /var/www/html/lennadigitais/recuperar_senha.php on line 40
+[02-Aug-2025 20:44:06 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /var/www/html/lennadigitais/recuperar_senha.php:40
+Stack trace:
+#0 {main}
+  thrown in /var/www/html/lennadigitais/recuperar_senha.php on line 40
+[02-Aug-2025 20:44:13 America/Sao_Paulo] PHP Warning:  Undefined variable $conn in /var/www/html/lennadigitais/recuperar_senha.php on line 40
+[02-Aug-2025 20:44:13 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /var/www/html/lennadigitais/recuperar_senha.php:40
+Stack trace:
+#0 {main}
+  thrown in /var/www/html/lennadigitais/recuperar_senha.php on line 40
+[02-Aug-2025 20:47:19 America/Sao_Paulo] RECUPERAR_SENHA: Novo token gerado: 12729a406c3a3a2ea95708e25fec9ec6761e99160dbebd335f1ee0e121022818 expira em: 2025-08-02 21:47:19 (PHP Time: 1754178439)
+[02-Aug-2025 20:47:19 America/Sao_Paulo] RECUPERAR_SENHA: Token inserido no DB para romeusn@gmail.com. ID do token: 16
+[02-Aug-2025 20:47:22 America/Sao_Paulo] RECUPERAR_SENHA: Email de redefinição enviado com sucesso para romeusn@gmail.com
+[02-Aug-2025 20:49:39 America/Sao_Paulo] RECUPERAR_SENHA: Novo token gerado: 36ef9b966974350537fcec65f19d7b3723da6e6fc0ed49b0e99aeda82e323069 expira em: 2025-08-02 21:49:39 (PHP Time: 1754178579)
+[02-Aug-2025 20:49:39 America/Sao_Paulo] RECUPERAR_SENHA: Token inserido no DB para romeusn@gmail.com. ID do token: 17
+[02-Aug-2025 20:49:42 America/Sao_Paulo] RECUPERAR_SENHA: Email de redefinição enviado com sucesso para romeusn@gmail.com
+[02-Aug-2025 20:57:08 America/Sao_Paulo] RECUPERAR_SENHA: Novo token gerado: 670a0f67d5841e504131abc1d8d379123466036bee50f68c87ff777466e4b955 expira em: 2025-08-02 21:57:08 (PHP Time: 1754179028)
+[02-Aug-2025 20:57:08 America/Sao_Paulo] RECUPERAR_SENHA: Token inserido no DB para romeusn@gmail.com. ID do token: 18
+[02-Aug-2025 20:57:11 America/Sao_Paulo] RECUPERAR_SENHA: Email de redefinição enviado com sucesso para romeusn@gmail.com
+[02-Aug-2025 20:57:15 America/Sao_Paulo] --- RESETAR_SENHA (GET) ---
+[02-Aug-2025 20:57:15 America/Sao_Paulo] Token recebido na URL: 670a0f67d5841e504131abc1d8d379123466036bee50f68c87ff777466e4b955
+[02-Aug-2025 20:57:15 America/Sao_Paulo] GET: Info do DB para token: Array
+(
+    [email] => romeusn@gmail.com
+    [expires_at] => 2025-08-02 21:57:08
+)
+
+[02-Aug-2025 20:57:15 America/Sao_Paulo] GET: expires_at (DB): 2025-08-02 21:57:08
+[02-Aug-2025 20:57:15 America/Sao_Paulo] GET: strtotime(expires_at): 1754182628
+[02-Aug-2025 20:57:15 America/Sao_Paulo] GET: time() atual: 1754179035
+[02-Aug-2025 20:57:15 America/Sao_Paulo] GET: Comparação: VÁLIDO
+[02-Aug-2025 20:57:21 America/Sao_Paulo] --- RESETAR_SENHA (GET) ---
+[02-Aug-2025 20:57:21 America/Sao_Paulo] Token recebido na URL: Nenhum token na URL
+[02-Aug-2025 20:57:21 America/Sao_Paulo] --- RESETAR_SENHA (POST) ---
+[02-Aug-2025 20:57:21 America/Sao_Paulo] POST: Token recebido no POST (hidden field): 670a0f67d5841e504131abc1d8d379123466036bee50f68c87ff777466e4b955
+[02-Aug-2025 20:57:21 America/Sao_Paulo] POST: Nova Senha preenchida? Sim
+[02-Aug-2025 20:57:21 America/Sao_Paulo] POST: Confirma Senha preenchida? Sim
+[02-Aug-2025 20:57:21 America/Sao_Paulo] POST: Info do DB para token (POST): Array
+(
+    [email] => romeusn@gmail.com
+    [expires_at] => 2025-08-02 21:57:08
+)
+
+[02-Aug-2025 20:57:21 America/Sao_Paulo] POST: expires_at (DB no POST): 2025-08-02 21:57:08
+[02-Aug-2025 20:57:21 America/Sao_Paulo] POST: strtotime(expires_at) (POST): 1754182628
+[02-Aug-2025 20:57:21 America/Sao_Paulo] POST: time() atual (POST): 1754179041
+[02-Aug-2025 20:57:21 America/Sao_Paulo] POST: Comparação (POST): VÁLIDO
+[02-Aug-2025 20:57:24 America/Sao_Paulo] --- RESETAR_SENHA (GET) ---
+[02-Aug-2025 20:57:24 America/Sao_Paulo] Token recebido na URL: 670a0f67d5841e504131abc1d8d379123466036bee50f68c87ff777466e4b955
+[02-Aug-2025 20:57:24 America/Sao_Paulo] GET: Token NÃO encontrado no DB.
+[10-Aug-2025 22:02:13 America/Sao_Paulo] RECUPERAR_SENHA: Novo token gerado: e10a43d9e5db118ab148b83b10bfa908d214ec094a6fd221f768d047c5f8bb1d expira em: 2025-08-10 23:02:13 (PHP Time: 1754874133)
+[10-Aug-2025 22:02:13 America/Sao_Paulo] RECUPERAR_SENHA: Token inserido no DB para romeusn@gmail.com. ID do token: 1
+[10-Aug-2025 22:02:18 America/Sao_Paulo] RECUPERAR_SENHA: Email de redefinição enviado com sucesso para romeusn@gmail.com
+[10-Aug-2025 22:02:29 America/Sao_Paulo] --- RESETAR_SENHA (GET) ---
+[10-Aug-2025 22:02:29 America/Sao_Paulo] Token recebido na URL: e10a43d9e5db118ab148b83b10bfa908d214ec094a6fd221f768d047c5f8bb1d
+[10-Aug-2025 22:02:29 America/Sao_Paulo] GET: Info do DB para token: Array
+(
+    [email] => romeusn@gmail.com
+    [expires_at] => 2025-08-10 23:02:13
+)
+
+[10-Aug-2025 22:02:29 America/Sao_Paulo] GET: expires_at (DB): 2025-08-10 23:02:13
+[10-Aug-2025 22:02:29 America/Sao_Paulo] GET: strtotime(expires_at): 1754877733
+[10-Aug-2025 22:02:29 America/Sao_Paulo] GET: time() atual: 1754874149
+[10-Aug-2025 22:02:29 America/Sao_Paulo] GET: Comparação: VÁLIDO
+[10-Aug-2025 22:02:35 America/Sao_Paulo] --- RESETAR_SENHA (GET) ---
+[10-Aug-2025 22:02:35 America/Sao_Paulo] Token recebido na URL: e10a43d9e5db118ab148b83b10bfa908d214ec094a6fd221f768d047c5f8bb1d
+[10-Aug-2025 22:02:35 America/Sao_Paulo] GET: Info do DB para token: Array
+(
+    [email] => romeusn@gmail.com
+    [expires_at] => 2025-08-10 23:02:13
+)
+
+[10-Aug-2025 22:02:35 America/Sao_Paulo] GET: expires_at (DB): 2025-08-10 23:02:13
+[10-Aug-2025 22:02:35 America/Sao_Paulo] GET: strtotime(expires_at): 1754877733
+[10-Aug-2025 22:02:35 America/Sao_Paulo] GET: time() atual: 1754874155
+[10-Aug-2025 22:02:35 America/Sao_Paulo] GET: Comparação: VÁLIDO
+[10-Aug-2025 22:02:35 America/Sao_Paulo] --- RESETAR_SENHA (GET) ---
+[10-Aug-2025 22:02:35 America/Sao_Paulo] Token recebido na URL: Nenhum token na URL
+[10-Aug-2025 22:02:35 America/Sao_Paulo] --- RESETAR_SENHA (POST) ---
+[10-Aug-2025 22:02:35 America/Sao_Paulo] POST: Token recebido no POST (hidden field): e10a43d9e5db118ab148b83b10bfa908d214ec094a6fd221f768d047c5f8bb1d
+[10-Aug-2025 22:02:35 America/Sao_Paulo] POST: Nova Senha preenchida? Sim
+[10-Aug-2025 22:02:35 America/Sao_Paulo] POST: Confirma Senha preenchida? Sim
+[10-Aug-2025 22:02:35 America/Sao_Paulo] POST: Info do DB para token (POST): Array
+(
+    [email] => romeusn@gmail.com
+    [expires_at] => 2025-08-10 23:02:13
+)
+
+[10-Aug-2025 22:02:35 America/Sao_Paulo] POST: expires_at (DB no POST): 2025-08-10 23:02:13
+[10-Aug-2025 22:02:35 America/Sao_Paulo] POST: strtotime(expires_at) (POST): 1754877733
+[10-Aug-2025 22:02:35 America/Sao_Paulo] POST: time() atual (POST): 1754874155
+[10-Aug-2025 22:02:35 America/Sao_Paulo] POST: Comparação (POST): VÁLIDO

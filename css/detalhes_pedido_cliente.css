@@ -1,0 +1,308 @@
+/* --- Estilos para detalhes_pedido_cliente.php --- */
+
+.order-detail-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    box-sizing: border-box;
+    width: calc(100% - 40px); /* Garante que não vá além da viewport, considerando uma margem */
+    min-width: 280px; /* Largura mínima para celulares muito pequenos */
+}
+
+.order-detail-container h1 {
+    color: #e83e8c;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* Estilo para os cartões de informação */
+.order-summary-card,
+.order-items-card,
+.customer-info-card {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 25px;
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+}
+
+.order-summary-card h3,
+.order-items-card h3,
+.customer-info-card h3 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+.order-summary-card p,
+.customer-info-card p {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.order-summary-card strong,
+.customer-info-card strong {
+    color: #555;
+}
+
+/* Tabela de Itens do Pedido */
+.order-items-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    table-layout: fixed; /* Ajuda a controlar larguras de coluna */
+}
+
+.order-items-table th,
+.order-items-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #f0f0f0;
+    white-space: normal; /* Permitir quebra de linha em todas as células por padrão */
+    word-wrap: break-word; /* Para garantir quebra de palavras longas */
+    box-sizing: border-box;
+}
+
+.order-items-table th {
+    background-color: #f8f8f8;
+    color: #666;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    white-space: nowrap; /* Manter nowrap para cabeçalhos que se adaptam bem */
+}
+/* Definir largura para colunas específicas para evitar estouro (para desktop) */
+.order-items-table th:first-child,
+.order-items-table td:first-child {
+    width: 45%; /* Mais espaço para o nome do produto */
+}
+.order-items-table th:nth-child(2),
+.order-items-table td:nth-child(2) {
+    width: 20%; /* Preço unitário */
+}
+.order-items-table th:nth-child(3),
+.order-items-table td:nth-child(3) {
+    width: 10%; /* Quantidade */
+}
+.order-items-table th:nth-child(4),
+.order-items-table td:nth-child(4) {
+    width: 25%; /* Subtotal */
+}
+
+
+.order-items-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.order-items-table td img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 4px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+/* Estilos de status (replicados) */
+.status-aguardando-pagamento {
+    color: #ffc107;
+    font-weight: bold;
+}
+.status-pago {
+    color: #28a745;
+    font-weight: bold;
+}
+.status-cancelado {
+    color: #dc3545;
+    font-weight: bold;
+}
+.status-em-processamento {
+    color: #007bff;
+    font-weight: bold;
+}
+.status-concluido {
+    color: #28a745;
+    font-weight: bold;
+}
+
+/* Botões da página */
+.secondary-actions {
+    margin-top: 30px;
+    padding-top: 25px;
+    border-top: 1px solid #eee;
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    white-space: nowrap; /* Mantém nowrap para botões inline na linha */
+    box-sizing: border-box;
+}
+
+.btn-primary {
+    background-color: #e83e8c;
+    color: white;
+}
+.btn-primary:hover {
+    background-color: #d12c7b;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+.btn-whatsapp-comprovante {
+    background-color: #25d366;
+    color: white;
+    margin-top: 15px; /* Espaço do parágrafo anterior */
+}
+.btn-whatsapp-comprovante:hover {
+    background-color: #1da851;
+}
+
+/* Responsividade para tabelas e layout geral */
+@media (max-width: 768px) {
+    .order-detail-container {
+        margin: 30px 0;
+        padding: 20px 15px;
+        width: 100%;
+    }
+    
+    .order-summary-card,
+    .order-items-card,
+    .customer-info-card {
+        padding: 15px;
+    }
+
+    .order-items-table thead {
+        display: none;
+    }
+
+    .order-items-table, .order-items-table tbody, .order-items-table tr, .order-items-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .order-items-table tr {
+        margin-bottom: 15px;
+        border: 1px solid #eee;
+        border-radius: 8px;
+        padding: 10px;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .order-items-table td {
+        text-align: right;
+        padding-left: 50%; /* Espaço para o label à esquerda */
+        position: relative;
+        white-space: normal; /* Permite que o texto quebre */
+        word-wrap: break-word; /* Força a quebra de palavras longas */
+        min-height: 25px; /* Altura mínima para conteúdo */
+        line-height: 1.4;
+    }
+
+    .order-items-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        width: calc(50% - 30px);
+        text-align: left;
+        font-weight: bold;
+        color: #555;
+        line-height: 1.4;
+    }
+    /* ESPECÍFICO PARA A CÉLULA DE PRODUTO */
+    .order-items-table td[data-label="Produto"] {
+        text-align: center; /* Centraliza a imagem e o texto do produto */
+        padding-left: 15px; /* Remove o padding-left extra */
+        display: flex; /* Flexbox para organizar imagem e nome */
+        flex-direction: column; /* Imagem acima do nome */
+        align-items: center; /* Centraliza horizontalmente */
+        justify-content: center;
+    }
+    .order-items-table td[data-label="Produto"] img {
+        display: block;
+        margin: 0 auto 10px auto; /* Centraliza a imagem */
+    }
+    /* FIM ESPECÍFICO PARA CÉLULA DE PRODUTO */
+
+    .order-items-table td:last-child {
+        padding-bottom: 20px;
+        border-bottom: none;
+    }
+    /* NOVO: Ajuste para os elementos de valor para melhor legibilidade */
+    .order-items-table td[data-label="Preço Unit."],
+    .order-items-table td[data-label="Qtd."],
+    .order-items-table td[data-label="Subtotal"] {
+        font-size: 1.1em;
+        font-weight: bold;
+        /* NOVO: Usar flexbox para alinhar label e valor na mesma linha, mas com o label à esquerda */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 15px; /* Remove o padding extra que estava empurrando o conteúdo */
+    }
+    .order-items-table td[data-label="Preço Unit."]::before,
+    .order-items-table td[data-label="Qtd."]::before,
+    .order-items-table td[data-label="Subtotal"]::before {
+        position: static; /* Remove o posicionamento absoluto */
+        width: auto; /* Largura automática para o label */
+        margin-right: 10px; /* Espaço entre o label e o valor */
+        text-align: left;
+        flex-shrink: 0; /* Impede que o label encolha */
+    }
+
+
+    .btn {
+        width: calc(100% - 20px);
+        margin: 10px 0;
+        white-space: normal;
+    }
+}
+
+@media (max-width: 480px) {
+    .order-detail-container {
+        margin: 20px 0;
+        padding: 15px;
+    }
+
+    .order-detail-container h1 {
+        font-size: 2em;
+    }
+
+    .order-summary-card h3,
+    .order-items-card h3,
+    .customer-info-card h3 {
+        font-size: 1.5em;
+    }
+    /* NOVO: Ajustes para telas muito pequenas para os valores */
+    .order-items-table td[data-label="Preço Unit."],
+    .order-items-table td[data-label="Qtd."],
+    .order-items-table td[data-label="Subtotal"] {
+        font-size: 1em; /* Reduz a fonte para caber */
+    }
+}
+

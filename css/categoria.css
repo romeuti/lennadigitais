@@ -1,0 +1,220 @@
+/* --- Estilo Moderno e Escuro para a Página de Categorias --- */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: #1e293b; /* Fundo azul-escuro/chumbo */
+    color: #cbd5e1; /* Cor de texto clara */
+    margin: 0;
+    padding: 30px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-weight: 400;
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: #f1f5f9;
+    font-weight: 600;
+    border-bottom: 1px solid #475569;
+    padding-bottom: 15px;
+}
+
+.card {
+    background-color: #334155; /* Cor do card um pouco mais clara */
+    border: 1px solid #475569;
+    border-radius: 8px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #94a3b8;
+}
+
+.form-group input[type="text"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #475569;
+    background-color: #1e293b;
+    color: #f1f5f9;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.form-group input[type="text"]:focus {
+    outline: none;
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+}
+
+.btn-submit {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #38bdf8; /* Azul claro vibrante */
+    color: #0f172a;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    transition: background-color 0.3s;
+}
+.btn-submit:hover {
+    background-color: #7dd3fc;
+}
+
+/* Tabela para listar categorias existentes */
+.table-wrapper {
+    overflow-x: auto;
+}
+.category-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.category-table th,
+.category-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #475569;
+}
+
+.category-table th {
+    color: #cbd5e1;
+    font-weight: 600;
+}
+
+/* --- BOTÕES E ALERTAS ADICIONADOS --- */
+.top-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.top-actions a {
+    text-decoration: none;
+    color: #cbd5e1;
+    background-color: #475569;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+.top-actions a:hover {
+    background-color: #64748b;
+}
+
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    color: #ffffff;
+    text-align: center;
+    font-weight: 600;
+}
+.alert-success { background-color: #28a745; }
+.alert-error { background-color: #dc3545; }
+
+/* Botões de Ação na Tabela */
+.action-links { display: flex; gap: 10px; }
+.action-links a, .action-links button {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 5px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+.btn-edit { background-color: #007bff; }
+.btn-edit:hover { background-color: #0069d9; }
+.btn-remove { background-color: #dc3545; }
+.btn-remove:hover { background-color: #c82333; }
+
+/* --- ESTILOS DO MODAL DE EDIÇÃO --- */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+}
+.modal-content {
+    background-color: #334155;
+    margin: 15% auto;
+    padding: 30px;
+    border: 1px solid #475569;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+}
+.close-button {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close-button:hover, .close-button:focus {
+    color: #fff;
+}
+
+/* --- LAYOUT RESPONSIVO --- */
+@media (max-width: 768px) {
+    body { padding: 15px; }
+    .table-wrapper { overflow-x: hidden; }
+    .category-table thead { display: none; }
+    .category-table tr {
+        display: block;
+        margin-bottom: 15px;
+        border: 1px solid #475569;
+        border-radius: 6px;
+        padding: 10px;
+    }
+    .category-table td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: right;
+        padding: 10px 5px;
+        border-bottom: 1px solid #475569;
+    }
+    .category-table td:last-child {
+        border-bottom: none;
+    }
+    .category-table td::before {
+        content: attr(data-label);
+        font-weight: 600;
+        text-align: left;
+        color: #94a3b8;
+    }
+}
+

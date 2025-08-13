@@ -1,0 +1,139 @@
+/* /css/login.css */
+* { 
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* IMPORTANTE: Garanta que a imagem /img/adm.jpg exista no seu servidor */
+  background: url('../img/login.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.painel-sci {
+  background-color: rgba(0, 0, 0, 0.85);
+  border: 2px solid #00bfff;
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 0 25px rgba(0, 191, 255, 0.5);
+  max-width: 450px;
+  width: 100%;
+  text-align: center;
+  backdrop-filter: blur(4px); /* Efeito de vidro fosco */
+}
+
+.painel-sci img.slogan { 
+  width: 180px; 
+  margin-bottom: 20px; 
+}
+
+.painel-sci h2 { 
+  color: #f50303; 
+  margin-bottom: 25px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  background: #1a1a2e;
+  border: 1px solid #00bfff;
+  border-radius: 10px;
+  padding-right: 10px;
+  margin-bottom: 20px;
+}
+
+.input-group i {
+  color: #00bfff;
+  font-size: 18px;
+  padding: 10px 15px;
+}
+
+.input-group input {
+  background: transparent;
+  border: none;
+  color: white;
+  outline: none;
+  flex: 1;
+  font-size: 16px;
+}
+
+/* Container para o input e o ícone de olho */
+.input-eye-container {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 20px;
+  color: #00bfff;
+  user-select: none;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn.login { 
+  background-color: #00bfff; 
+  color: #1a1a2e;
+  box-shadow: 0 0 15px rgba(0, 191, 255, 0.4);
+}
+.btn.login:hover {
+  box-shadow: 0 0 25px rgba(0, 191, 255, 0.8);
+}
+
+.btn.home {
+  background: linear-gradient(90deg, #7f00ff, #e100ff);
+  color: white;
+  box-shadow: 0 0 15px rgba(225, 0, 255, 0.4);
+}
+.btn.home:hover {
+  box-shadow: 0 0 25px rgba(225, 0, 255, 0.8);
+}
+
+.error {
+  color: #ff4d4d;
+  background-color: rgba(255, 0, 0, 0.15);
+  border: 1px solid #ff4d4d;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+@media (max-width: 480px) {
+  .painel-sci { padding: 20px; }
+  .painel-sci img.slogan { width: 140px; }
+}
+
